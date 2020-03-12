@@ -217,7 +217,7 @@
       <a
         class="button"
         target="_blank"
-        :href="mailto:?subject=${description}&amp;body=${emailBody}${url}"
+        :href="`mailto:?subject=${description}&amp;body=${emailBody}${url}`"
         style="background: true"
         v-if="Email"
         >Email&nbsp;
