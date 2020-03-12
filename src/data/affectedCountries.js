@@ -14,6 +14,7 @@ const affectedCountries = [
     "Chile",
     "Colombia",
     "Costa Rica",
+    "Côte d'Ivoire",
     "Dominican Republic",
     "Ecuador",
     "French Guiana",
