@@ -57,7 +57,7 @@
           </a>
 
           <a
-            class="status p-2 bg-white text-green-500 text-center font-bold text-2xl "
+            class="status p-2 bg-white text-green-500 text-center block font-bold text-2xl "
             v-if="selectedCountryHealth === 'clear'"
           >
             NOT AFFECTED
@@ -201,7 +201,7 @@
     <div class="built-using bg-gray-800 text-white">
       <div class="w-1/2 mx-auto py-10">
         <h2 class="text-2xl text-center">Built using</h2>
-        <ul class="flex flex-wrap justify-center py-10">
+        <ul class="flex flex-wrap text-center justify-center py-5">
           <li><a href="https://vuejs.org">VueJS</a></li>
           <li><a href="https://tailwindcss.com">TailwindCSS</a></li>
           <li>
