@@ -80,6 +80,7 @@ const affectedCountries = [
     "Norway",
     "Poland",
     "Portugal",
+    "Reunion",
     "Romania",
     "Russia",
     "San Marino",
