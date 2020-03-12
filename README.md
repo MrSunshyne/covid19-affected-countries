@@ -1,24 +1,15 @@
-# vue-tailwind-boilerplate
+# Covid 19 Status
 
-## Project setup
-```
-npm install
-```
+A simple interface to check which countries have been affected till now.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+[View Website](https://covid19-status.netlify.com)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+#FAQ 
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- What is the source ?
+    - The list of affected countries are from
+    
+- Is this updated automatically?
+    - No. I update the list whenever practically possible. Anyone can
+            submit a PR to update the list.
+         
