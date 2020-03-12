@@ -2,13 +2,6 @@
 
 A simple interface to check which countries have been affected till now.
 
-[View Website](https://covid19-status.netlify.com)
+![Covid 19 Status Image](https://github.com/MrSunshyne/covid19-affected-countries/raw/master/public/images/og-image.jpg)
 
-#FAQ 
-
-- What is the source ?
-    - The list of affected countries are from
-    
-- Is this updated automatically?
-    - No. I update the list whenever practically possible. Anyone can
-            submit a PR to update the list.
+# [View Website](https://covid19-status.netlify.com)
