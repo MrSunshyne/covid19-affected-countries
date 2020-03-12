@@ -13,13 +13,13 @@
       <div
         class="container mx-auto flex flex-col lg:flex-row justify-center md:justify-around items-center"
       >
-        <div class="text-5xl font-black text-center text-white ">
+        <div class="text-3xl sm:text-5xl font-black text-center text-white ">
           How is
           <input
-            class="border-8 border-gray-200 text-gray-900 font-black mx-2 text-center  block md:inline"
+            class="border-8 border-gray-200 text-gray-900 font-black mx-auto sm:mx-2 text-center  block md:inline"
             type="text"
             v-model="selectedCountry"
-            size="10ch"
+            size="8ch"
             list="allCountries"
           />
           doing ?
