@@ -2,7 +2,7 @@
   <div class="flex min-h-screen flex-col">
     <!--		<main-menu></main-menu>-->
     <router-view />
-    <footer-section />
+    <!--    <footer-section />-->
   </div>
 </template>
 

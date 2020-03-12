@@ -12,4 +12,3 @@ A simple interface to check which countries have been affected till now.
 - Is this updated automatically?
     - No. I update the list whenever practically possible. Anyone can
             submit a PR to update the list.
-         

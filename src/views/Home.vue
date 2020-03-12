@@ -46,26 +46,31 @@
               v-if="selectedCountryHealth === 'unknown'"
             />
           </div>
-          <div
-            class="status p-2 bg-red-800 text-red-200 text-center font-bold text-2xl"
+          <a
+            class="status rounded-full p-2 bg-red-800 text-red-200 text-center block font-bold text-2xl hover:bg-red-900"
             v-if="selectedCountryHealth === 'infected'"
+            :href="
+              `https://www.google.com/search?q=covid%2019%20in%20${selectedCountry}`
+            "
           >
             AFFECTED
-          </div>
+          </a>
 
-          <div
-            class="status p-2 bg-white text-green-500 text-center font-bold text-2xl"
+          <a
+            class="status p-2 bg-white text-green-500 text-center font-bold text-2xl "
             v-if="selectedCountryHealth === 'clear'"
           >
             NOT AFFECTED
-          </div>
+          </a>
 
-          <div
-            class="status p-2 bg-white text-green-500 text-center font-bold text-xl"
+          <a
+            class="status p-2 bg-white text-green-500 text-center font-bold text-xl hover:bg-green-100"
             v-if="selectedCountryHealth === 'unknown'"
+            href="https://www.cdc.gov/coronavirus/2019-ncov/protect/index.html"
+            target="_blank"
           >
             How to protect myself?
-          </div>
+          </a>
         </div>
       </div>
 
@@ -74,6 +79,7 @@
         </option>
       </datalist>
     </div>
+
     <div class="md:flex px-8">
       <div class="md:w-1/2">
         <h1
@@ -133,7 +139,9 @@
 
     <div class="py-10 container mx-auto">
       <h2 class="text-2xl text-center">FAQ</h2>
-      <ul class="faq grid grid-cols-3">
+      <ul
+        class="faq grid py-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+      >
         <li>
           <label>What is the source ?</label>
           <p>
@@ -146,7 +154,18 @@
         </li>
         <li>
           <label>When was this page last updated?</label>
-          <p>Last updated: xx:xx:xx</p>
+          <p>Last updated: {{ lastUpdated }}</p>
+        </li>
+        <li>
+          <label>Should I trust this page?</label>
+          <p>
+            Please use the
+            <a
+              href="https://www.cdc.gov/coronavirus/2019-ncov/locations-confirmed-cases.html"
+              >official list</a
+            >
+            from CDC to cross check.
+          </p>
         </li>
         <li>
           <label>Is this updated automatically?</label>
@@ -158,13 +177,45 @@
             >
           </p>
         </li>
+        <li>
+          <label
+            >I'm a developer, how can I get the list of affected
+            countries?</label
+          >
+          <p>
+            I haven't found an endpoint for that yet. For now use
+            <a
+              href="https://gist.github.com/MrSunshyne/ee206dedf5b0cfe4303d5320b10fc15f"
+              >this gist</a
+            >
+            to quickly extract the list of countries
+          </p>
+        </li>
+        <li>
+          <label>Why did you build this?</label>
+          <p>It's hard to compare by starring at the CDC list of countries</p>
+        </li>
       </ul>
     </div>
 
-    <div class="flex hidden ">
-      <pre>{{ affectedCountries }}</pre>
-
-      <pre>{{ allCountries }}</pre>
+    <div class="built-using bg-gray-800 text-white">
+      <div class="w-1/2 mx-auto py-10">
+        <h2 class="text-2xl text-center">Built using</h2>
+        <ul class="flex flex-wrap justify-center py-10">
+          <li><a href="https://vuejs.org">VueJS</a></li>
+          <li><a href="https://tailwindcss.com">TailwindCSS</a></li>
+          <li>
+            <a href="https://www.iconfinder.com/p/coronavirus-awareness-icons"
+              >Icons from IconFinder</a
+            >
+          </li>
+          <li>
+            Social sharing
+            <a href="https://codepen.io/daviddarnes/pen/GRJgoxy">codepen</a> by
+            David
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -179,7 +230,8 @@ export default {
     return {
       affectedCountries,
       allCountries,
-      selectedCountry: "Mauritius"
+      selectedCountry: "Mauritius",
+      lastUpdated: "12th March 2020 @ 16:42"
     };
   },
   computed: {
@@ -213,6 +265,14 @@ label {
   @apply font-bold my-4;
 }
 
+.faq a,
+.built-using a {
+  @apply underline font-bold;
+}
+
+.built-using li {
+  margin: 10px;
+}
 .faq li {
   margin-bottom: 2em;
 }

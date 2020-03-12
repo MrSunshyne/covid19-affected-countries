@@ -61,6 +61,7 @@
     <div class="share">
       <a
         class="button"
+        target="_blank"
         :href="
           `https://twitter.com/intent/tweet/?url=${url}&amp;text=${description}&amp;via=${twitterHandle}`
         "
@@ -79,6 +80,7 @@
       ></a>
       <a
         class="button"
+        target="_blank"
         :href="`https://facebook.com/sharer/sharer.php?u=${url}`"
         style="background: #3B5998"
         v-if="facebook"
@@ -95,6 +97,7 @@
       ></a>
       <a
         class="button"
+        target="_blank"
         :href="
           `https://pinterest.com/pin/create/button/?url=${url}&amp;description=${description}&amp;media=${pinterestImage}`
         "
@@ -113,6 +116,7 @@
       ></a>
       <a
         class="button"
+        target="_blank"
         :href="
           `https://www.linkedin.com/shareArticle?url=${url}&amp;title=${description}&amp;source=${siteTitle}&amp;mini=true`
         "
@@ -131,6 +135,7 @@
       ></a>
       <a
         class="button"
+        target="_blank"
         :href="
           `https://tumblr.com/widgets/share/tool?canonicalUrl=${url}&amp;tags=&amp;caption=${description}`
         "
@@ -149,6 +154,7 @@
       ></a>
       <a
         class="button"
+        target="_blank"
         :href="
           `https://reddit.com/submit?url=${url}&amp;title=${description}&amp;resubmit=true`
         "
@@ -168,6 +174,7 @@
 
       <a
         class="button"
+        target="_blank"
         :href="
           `https://news.ycombinator.com/submitlink?u=${url}&amp;t=${description}`
         "
@@ -188,6 +195,7 @@
 
       <a
         class="button"
+        target="_blank"
         :href="
           `https://www.designernews.co/submit?url=${url}&amp;title=${description}`
         "
@@ -208,7 +216,8 @@
 
       <a
         class="button"
-        href="mailto:?subject=${description}&amp;body=${emailBody}${url}"
+        target="_blank"
+        :href="mailto:?subject=${description}&amp;body=${emailBody}${url}"
         style="background: true"
         v-if="Email"
         >Email&nbsp;
@@ -256,7 +265,7 @@ export default {
       return document.title;
     },
     twitterHandle() {
-      return "@__Sun__";
+      return "__Sun__";
     },
     pinterestImage() {
       return "";
