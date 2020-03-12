@@ -140,7 +140,7 @@
     <div class="py-10 container mx-auto">
       <h2 class="text-2xl text-center">FAQ</h2>
       <ul
-        class="faq grid py-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        class="faq px-8 sm:px-0 grid py-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
       >
         <li>
           <label>What is the source ?</label>
@@ -149,7 +149,7 @@
             <a
               href="https://www.cdc.gov/coronavirus/2019-ncov/locations-confirmed-cases.html"
               >CDC.gov</a
-            >
+            >.
           </p>
         </li>
         <li>
@@ -174,7 +174,7 @@
             submit a PR to update the list
             <a href="https://github.com/MrSunshyne/covid19-affected-countries"
               >here</a
-            >
+            >.
           </p>
         </li>
         <li>
@@ -188,12 +188,12 @@
               href="https://gist.github.com/MrSunshyne/ee206dedf5b0cfe4303d5320b10fc15f"
               >this gist</a
             >
-            to quickly extract the list of countries
+            to quickly extract the list of countries.
           </p>
         </li>
         <li>
           <label>Why did you build this?</label>
-          <p>It's hard to compare by starring at the CDC list of countries</p>
+          <p>It's hard to compare by starring at the CDC list of countries.</p>
         </li>
       </ul>
     </div>
@@ -213,6 +213,23 @@
             Social sharing
             <a href="https://codepen.io/daviddarnes/pen/GRJgoxy">codepen</a> by
             David
+          </li>
+          <li>
+            Data souce from
+            <a
+              href="https://www.cdc.gov/coronavirus/2019-ncov/locations-confirmed-cases.html"
+              >CDC.gov</a
+            >
+          </li>
+          <li>
+            Repo on
+            <a href="https://github.com/MrSunshyne/covid19-affected-countries"
+              >Github</a
+            >
+          </li>
+          <li>
+            Hosted on
+            <a href="https://netlify.com">netlify</a>
           </li>
         </ul>
       </div>
