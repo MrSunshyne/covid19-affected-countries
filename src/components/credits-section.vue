@@ -2,7 +2,7 @@
   <div class="built-using bg-gray-800 text-white">
     <div class=" mx-auto pt-10">
       <p class="text-center">
-        Made by <a href="https://twitter.com/__sun__">Sandeep Ramgolam</a>
+        Made by <a href="https://sandeep.ramgolam.com">Sandeep Ramgolam</a>
       </p>
       <div class="text-center py-5">using</div>
       <ul class="flex flex-wrap text-center justify-center pb-5">
