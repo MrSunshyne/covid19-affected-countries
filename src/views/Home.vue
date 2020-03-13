@@ -152,6 +152,9 @@ export default {
       lastUpdated: "12th March 2020 @ 13:07 GMT"
     };
   },
+  mounted() {
+    this.selectedCountry = this.randomCountry();
+  },
   computed: {
     unaffectedCountries() {
       return this.allCountries.filter(x => !this.affectedCountries.includes(x));
@@ -167,7 +170,13 @@ export default {
       return "unknown";
     }
   },
-  methods: {},
+  methods: {
+    randomCountry() {
+      return this.allCountries[
+        Math.floor(Math.random() * this.allCountries.length)
+      ];
+    }
+  },
   components: {
     ShareSection,
     CreditSection,
