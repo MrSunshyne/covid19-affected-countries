@@ -56,7 +56,7 @@ const allCountries = [
     "Croatia",
     "Cuba",
     "Cyprus",
-    "Czech Republic",
+    "Czechia",
     "Denmark",
     "Djibouti",
     "Dominica",
