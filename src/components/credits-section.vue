@@ -1,8 +1,11 @@
 <template>
   <div class="built-using bg-gray-800 text-white">
-    <div class="w-1/2 mx-auto py-10">
-      <h2 class="text-2xl text-center">Built using</h2>
-      <ul class="flex flex-wrap text-center justify-center py-5">
+    <div class=" mx-auto pt-10">
+      <p class="text-center">
+        Made by <a href="https://twitter.com/__sun__">Sandeep Ramgolam</a>
+      </p>
+      <div class="text-center py-5">using</div>
+      <ul class="flex flex-wrap text-center justify-center pb-5">
         <li><a href="https://vuejs.org">VueJS</a></li>
         <li><a href="https://tailwindcss.com">TailwindCSS</a></li>
         <li>
