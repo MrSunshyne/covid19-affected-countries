@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div
-      class="w-full py-10 lg:py-5 border-b-8 "
+      class="w-full py-10 lg:py-5 border-b-8 border-t-8 "
       :class="
         selectedCountryHealth === 'unknown'
           ? 'bg-gray-500 border-gray-700'
@@ -80,11 +80,14 @@
       </datalist>
     </div>
 
-    <div class="md:flex px-8">
+    <div
+      class="w-full last-updated text-center uppercase py-2 font-bold bg-gray-100 text-black"
+    >
+      <div class="container mx-auto ">Last updated: {{ lastUpdated }}</div>
+    </div>
+    <div class="md:flex px-8 py-5">
       <div class="md:w-1/2">
-        <h1
-          class="text-2xl text-gray-700 py-10 font-bold text-center md:text-right"
-        >
+        <h1 class="text-2xl text-gray-700 font-bold text-center md:text-right">
           Affected countries
         </h1>
 
@@ -104,9 +107,7 @@
       </div>
       <div class="w-10 hidden md:block">&nbsp;</div>
       <div class="md:w-1/2">
-        <h1
-          class="text-2xl text-gray-700 py-10 font-bold text-center md:text-left"
-        >
+        <h1 class="text-2xl text-gray-700 font-bold text-center md:text-left">
           Unaffected countries
         </h1>
 
@@ -127,113 +128,11 @@
       </div>
     </div>
 
-    <div class="flex bg-gray-300 mt-20 py-10">
-      <div class="container mx-auto flex items-center justify-center">
-        <div class="text-xl font-bold uppercase text-gray-700 px-4">
-          Share this page
-        </div>
+    <share-section />
 
-        <share-section />
-      </div>
-    </div>
+    <faq-section :last-updated="lastUpdated" />
 
-    <div class="py-10 container mx-auto">
-      <h2 class="text-2xl text-center">FAQ</h2>
-      <ul
-        class="faq px-8 sm:px-0 grid py-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
-      >
-        <li>
-          <label>What is the source ?</label>
-          <p>
-            The list of affected countries are from
-            <a
-              href="https://www.cdc.gov/coronavirus/2019-ncov/locations-confirmed-cases.html"
-              >CDC.gov</a
-            >.
-          </p>
-        </li>
-        <li>
-          <label>When was this page last updated?</label>
-          <p>Last updated: {{ lastUpdated }}</p>
-        </li>
-        <li>
-          <label>Should I trust this page?</label>
-          <p>
-            Please use the
-            <a
-              href="https://www.cdc.gov/coronavirus/2019-ncov/locations-confirmed-cases.html"
-              >official list</a
-            >
-            from CDC to cross check.
-          </p>
-        </li>
-        <li>
-          <label>Is this updated automatically?</label>
-          <p>
-            No. I update the list whenever practically possible. Anyone can
-            submit a PR to update the list
-            <a href="https://github.com/MrSunshyne/covid19-affected-countries"
-              >here</a
-            >.
-          </p>
-        </li>
-        <li>
-          <label
-            >I'm a developer, how can I get the list of affected
-            countries?</label
-          >
-          <p>
-            I haven't found an endpoint for that yet. For now use
-            <a
-              href="https://gist.github.com/MrSunshyne/ee206dedf5b0cfe4303d5320b10fc15f"
-              >this gist</a
-            >
-            to quickly extract the list of countries.
-          </p>
-        </li>
-        <li>
-          <label>Why did you build this?</label>
-          <p>It's hard to compare by starring at the CDC list of countries.</p>
-        </li>
-      </ul>
-    </div>
-
-    <div class="built-using bg-gray-800 text-white">
-      <div class="w-1/2 mx-auto py-10">
-        <h2 class="text-2xl text-center">Built using</h2>
-        <ul class="flex flex-wrap text-center justify-center py-5">
-          <li><a href="https://vuejs.org">VueJS</a></li>
-          <li><a href="https://tailwindcss.com">TailwindCSS</a></li>
-          <li>
-            <a href="https://www.iconfinder.com/p/coronavirus-awareness-icons"
-              >Icons from IconFinder</a
-            >
-          </li>
-          <li>
-            Social sharing
-            <a href="https://codepen.io/daviddarnes/pen/GRJgoxy">codepen</a> by
-            David
-          </li>
-          <li>
-            Data souce from
-            <a
-              href="https://www.cdc.gov/coronavirus/2019-ncov/locations-confirmed-cases.html"
-              >CDC.gov</a
-            >
-          </li>
-          <li>
-            Repo on
-            <a href="https://github.com/MrSunshyne/covid19-affected-countries"
-              >Github</a
-            >
-          </li>
-          <li>
-            Hosted on
-            <a href="https://netlify.com">netlify</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <credit-section />
   </div>
 </template>
 
@@ -241,6 +140,8 @@
 import affectedCountries from "../data/affectedCountries";
 import allCountries from "../data/allCountries";
 import ShareSection from "../components/share-section";
+import CreditSection from "../components/credits-section";
+import FaqSection from "../components/faq-section";
 export default {
   name: "home",
   data() {
@@ -268,7 +169,9 @@ export default {
   },
   methods: {},
   components: {
-    ShareSection
+    ShareSection,
+    CreditSection,
+    FaqSection
   }
 };
 </script>
