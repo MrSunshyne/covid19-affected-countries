@@ -58,7 +58,7 @@
           </a>
           <div class="w-48 h-48 p-4 mx-auto">
             <img
-              class="w-full h-full object-contain mx-auto block h-auto p-3"
+              class="w-full h-full object-contain mx-auto block h-auto p-3 virus-rotate"
               src="/images/virus.svg"
               alt=""
               v-if="selectedCountryHealth === 'infected'"
@@ -177,7 +177,7 @@ export default {
       affectedCountries,
       allCountries,
       selectedCountry: "Mauritius",
-      lastUpdated: "12th March 2020 @ 13:07 GMT"
+      lastUpdated: "13th March 2020 @ 12:58 GMT"
     };
   },
   mounted() {
@@ -223,6 +223,16 @@ export default {
 
 label {
   @apply font-bold my-4;
+}
+
+.virus-rotate {
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .faq a,
