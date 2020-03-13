@@ -49,7 +49,7 @@ const allCountries = [
     "Colombia",
     "Comoros",
     "Congo",
-    "DR Congo",
+    "Democratic Republic of Congo",
     "Cook Islands",
     "Costa Rica",
     "Cote D'Ivoire",
