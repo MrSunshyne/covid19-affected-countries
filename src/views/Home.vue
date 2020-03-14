@@ -177,7 +177,7 @@ export default {
       affectedCountries,
       allCountries,
       selectedCountry: "Mauritius",
-      lastUpdated: "13th March 2020 @ 12:58 GMT"
+      lastUpdated: "14th March 2020 @ 04:10 GMT"
     };
   },
   mounted() {
