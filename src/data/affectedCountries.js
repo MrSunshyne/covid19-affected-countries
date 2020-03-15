@@ -3,12 +3,17 @@ const affectedCountries = [
     "Burkina Faso",
     "Cameroon",
     "Democratic Republic of Congo",
+    "Ethopia",
+    "Gabon",
     "Ghana",
-    "Ivory Coast",
+    "Guinea",
+    "Ivory Coast (Côte d’Ivoire)",
     "Kenya",
+    "Mauritania",
     "Nigeria",
     "Senegal",
     "South Africa",
+    "Sudan",
     "Togo",
     "Argentina",
     "Bolivia",
@@ -21,7 +26,6 @@ const affectedCountries = [
     "Dominican Republic",
     "Ecuador",
     "French Guiana",
-    "Reunion",
     "Guadalupe",
     "Guyana",
     "Honduras",
@@ -104,6 +108,7 @@ const affectedCountries = [
     "India",
     "Indonesia",
     "Maldives",
+    "Mongolia",
     "Nepal",
     "Sri Lanka",
     "Thailand",
@@ -121,6 +126,7 @@ const affectedCountries = [
     "Singapore",
     "Taiwan",
     "Vietnam",
+    "Reunion"
 ]
 
 export default affectedCountries

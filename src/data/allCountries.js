@@ -52,7 +52,7 @@ const allCountries = [
     "Democratic Republic of Congo",
     "Cook Islands",
     "Costa Rica",
-    "Ivory Coast",
+    "Ivory Coast (Côte d’Ivoire)",
     "Croatia",
     "Cuba",
     "Cyprus",
