@@ -114,7 +114,7 @@ const allCountries = [
   "Kenya",
   "Kiribati",
   "Korea Democratic",
-  "Korea Republic",
+  "Republic of Korea",
   "Kuwait",
   "Kyrgyzstan",
   "Lao People's Democratic Republic",
